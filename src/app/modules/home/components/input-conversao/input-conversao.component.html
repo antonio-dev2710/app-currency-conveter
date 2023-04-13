@@ -1,0 +1,27 @@
+<section>
+  <div>
+    <p>{{outValor}} {{selectedValueOut}} igual a</p>
+    <h2>{{initValor}}, {{selectedValueInit}}</h2>
+    <div>
+      <p>de:</p>
+      <input value="0" aria-label="Campo do montante da moeda" type="number" [(ngModel)]="initValor"
+        (keyup)="SubmitValor()">
+      <div>
+        <select [(ngModel)]="selectedValueInit">
+          <option *ngFor="let item of  country" [value]="item">{{item}} </option>
+        </select>
+      </div>
+
+    </div>
+    <div>
+      <p>para:</p>
+      <input value="0" aria-label="Campo do montante da moeda" type="number" [(ngModel)]="outValor"
+      (keyup)="SubmitOutValor()">
+      <div>
+        <select [(ngModel)]="selectedValueOut" >
+          <option  *ngFor="let item of country" [value]="item">{{item}} </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
