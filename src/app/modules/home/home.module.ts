@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //componenets
 import { HeaderComponent } from './components/header/header.component';
 import { ValuePanelComponent } from './components/value-panel/value-panel.component';
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ]
 })
 export class HomeModule { }

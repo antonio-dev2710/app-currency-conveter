@@ -1,11 +1,17 @@
-<section>
-  <div>
-    <p>{{outValor}} {{selectedValueOut}} igual a</p>
-    <h2>{{initValor}}, {{selectedValueInit}}</h2>
-    <div>
-      <p>de:</p>
-      <input value="0" aria-label="Campo do montante da moeda" type="number" [(ngModel)]="initValor"
-        (keyup)="SubmitValor()">
+<main>
+  <section>
+    <div class="resultado-convercao ng-enter ng-leave ng-enter-active ng-enter-leave" *ngIf="initValor>0" ng-animate="'animate'">
+      <p >{{outValor}} {{selectedValueOut}} igual a</p>
+      <h2>{{initValor}}, {{selectedValueInit}}</h2>
+    </div>
+
+    <div class="alinhamento-estrutura">
+      <div>
+        <p>de:</p>
+        <input value="0" aria-label="Campo do montante da moeda" type="number" [(ngModel)]="initValor"
+          (keyup)="SubmitValor()">
+      </div>
+
       <div>
         <select [(ngModel)]="selectedValueInit">
           <option *ngFor="let item of  country" [value]="item">{{item}} </option>
@@ -13,15 +19,18 @@
       </div>
 
     </div>
-    <div>
-      <p>para:</p>
-      <input value="0" aria-label="Campo do montante da moeda" type="number" [(ngModel)]="outValor"
-      (keyup)="SubmitOutValor()">
+    <div class="alinhamento-estrutura">
       <div>
-        <select [(ngModel)]="selectedValueOut" >
-          <option  *ngFor="let item of country" [value]="item">{{item}} </option>
+        <p>para:</p>
+        <input value="0" aria-label="Campo do montante da moeda" type="number" [(ngModel)]="outValor"
+          (keyup)="SubmitOutValor()">
+      </div>
+
+      <div>
+        <select [(ngModel)]="selectedValueOut">
+          <option *ngFor="let item of country" [value]="item">{{item}} </option>
         </select>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>

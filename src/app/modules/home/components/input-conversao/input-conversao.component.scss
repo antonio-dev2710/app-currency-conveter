@@ -1,0 +1,95 @@
+@import "../../../../../dist/scss/variables.scss";
+
+section {
+  width: 100%;
+ min-height: 20rem;
+ padding-top: 2rem;
+
+  background: $quaternary-color;
+  box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 2rem;
+
+  margin-top: 20px;
+  .resultado-convercao {
+    opacity: 0;
+    transition: all 0.8s ease-in;
+    text-align: center;
+  }
+
+  .resultado-convercao.ng-enter,
+  .resultado-convercao.ng-leave {
+    opacity: 0;
+  }
+
+  .resultado-convercao.ng-enter.ng-enter-active,
+  .resultado-convercao.ng-leave.ng-leave-active {
+    opacity: 1;
+  }
+
+
+  .alinhamento-estrutura {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  select{
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    padding: 15px;
+    border: none;
+    margin: 2rem 2rem 1rem;
+    border-radius: 5px;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    // Adicionar estilo para hover e foco
+    &:hover {
+      background-color: lighten($background-color, 5%);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $focus-color;
+      box-shadow: 0 0 0 2px lighten($focus-color, 30%);
+    }
+
+    // Estilizar o placeholder do input
+    &::placeholder {
+      color: #a9a9a9;
+      font-weight: 300;
+    }
+
+  }
+
+  input {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    // Adicionar estilo para hover e foco
+    &:hover {
+      background-color: lighten($background-color, 5%);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $focus-color;
+      box-shadow: 0 0 0 2px lighten($focus-color, 30%);
+    }
+
+    // Estilizar o placeholder do input
+    &::placeholder {
+      color: #a9a9a9;
+      font-weight: 300;
+    }
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
